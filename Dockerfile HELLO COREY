@@ -1,0 +1,13 @@
+echo '<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Corey</title>
+</head>
+<body>
+    <h1>Hello Corey</h1>
+</body>
+</html>' > index.html
+echo 'FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]' > Dockerfile
